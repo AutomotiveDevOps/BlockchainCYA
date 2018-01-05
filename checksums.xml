@@ -31,7 +31,7 @@
       <arch>x86_64</arch>
       <command_line>hashdeep -d -l -c md5,sha1,sha256,tiger,whirlpool ChallengerLaunch.txt.xml ChallengerLaunch.txt.checksum ChallengerLaunch.txt</command_line>
       <uid>1001</uid>
-      <start_time>2018-01-05T09:59:03Z</start_time>
+      <start_time>2018-01-05T10:00:27Z</start_time>
     </execution_environment>
   </creator>
   <fileobject>
@@ -49,9 +49,9 @@
   <fileobject>
     <filename>ChallengerLaunch.txt.checksum</filename>
     <filesize>529</filesize>
-    <mtime>2018-01-05T09:59:03Z</mtime>
-    <ctime>2018-01-05T09:59:03Z</ctime>
-    <atime>2018-01-05T09:59:03Z</atime>
+    <mtime>2018-01-05T10:00:27Z</mtime>
+    <ctime>2018-01-05T10:00:27Z</ctime>
+    <atime>2018-01-05T10:00:27Z</atime>
     <hashdigest type='MD5'>08caaf14aaffe24956f1fcab168942ba</hashdigest>
     <hashdigest type='SHA1'>e9fe7afd7861c7df575e0605f6050c0d4a54c145</hashdigest>
     <hashdigest type='SHA256'>3c333c4878597eac82c5e2c7974fa1b42d1be479e37eb5a7fe70562fee5aa9fd</hashdigest>
@@ -61,24 +61,24 @@
   <fileobject>
     <filename>ChallengerLaunch.txt.xml</filename>
     <filesize>2361</filesize>
-    <mtime>2018-01-05T09:59:03Z</mtime>
-    <ctime>2018-01-05T09:59:03Z</ctime>
-    <atime>2018-01-05T09:59:03Z</atime>
-    <hashdigest type='MD5'>193a642dac5236e11b0f2c5eac98d201</hashdigest>
-    <hashdigest type='SHA1'>9fdaf26a380a5529fc76048e6d0b6e84cc218021</hashdigest>
-    <hashdigest type='SHA256'>9ff56b695e62b72508675f31c9dee27186756b4465c209511d443ef3ffee682d</hashdigest>
-    <hashdigest type='TIGER'>34dec7b0d3c11eb8e39d6682ca976f15fd6451df0ff96594</hashdigest>
-    <hashdigest type='WHIRLPOOL'>fb7704e54586c0af99a25ebfec60abef5241c1ddd76c46a215fb87c3e08eaec9aa0b4896b89eba873eb100ab8c603fa198129135c7ec7c9b81bbb00b51b41cd4</hashdigest>
+    <mtime>2018-01-05T10:00:27Z</mtime>
+    <ctime>2018-01-05T10:00:27Z</ctime>
+    <atime>2018-01-05T10:00:27Z</atime>
+    <hashdigest type='MD5'>23aa38ba4ffa75298e1c23bd54624e10</hashdigest>
+    <hashdigest type='SHA1'>1f3021c3c242766ea8e6b23ba00a2e6854f9be2a</hashdigest>
+    <hashdigest type='SHA256'>73a9bcfb2fd786555ff9e2a4916663568f1f5e6f962f1cea0a3b815434fc43b6</hashdigest>
+    <hashdigest type='TIGER'>37037d937081151662eb276dafd65c83f00644db904aaeef</hashdigest>
+    <hashdigest type='WHIRLPOOL'>10b7870e47952e4971d5296d98b8a5a3fe23259e83e28db745d3977463a45992120e6d4a740118875b4aa55916c54729df76ec17cc17fd4d157e19f54cc9ee72</hashdigest>
   </fileobject>
   <rusage>
     <utime>0.000000</utime>
     <stime>0.000000</stime>
-    <maxrss>1720</maxrss>
-    <minflt>176</minflt>
+    <maxrss>1972</maxrss>
+    <minflt>182</minflt>
     <majflt>0</majflt>
     <nswap>0</nswap>
     <inblock>0</inblock>
     <oublock>8</oublock>
-    <clocktime>0.000456</clocktime>
+    <clocktime>0.000447</clocktime>
   </rusage>
 </dfxml>

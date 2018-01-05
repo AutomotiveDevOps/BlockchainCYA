@@ -31,7 +31,7 @@
       <arch>x86_64</arch>
       <command_line>hashdeep -d -l -c md5,sha1,sha256,tiger,whirlpool ChallengerLaunch.txt</command_line>
       <uid>1001</uid>
-      <start_time>2018-01-05T09:59:03Z</start_time>
+      <start_time>2018-01-05T10:00:27Z</start_time>
     </execution_environment>
   </creator>
   <fileobject>
@@ -49,12 +49,12 @@
   <rusage>
     <utime>0.000000</utime>
     <stime>0.000000</stime>
-    <maxrss>1744</maxrss>
-    <minflt>169</minflt>
+    <maxrss>1824</maxrss>
+    <minflt>166</minflt>
     <majflt>0</majflt>
     <nswap>0</nswap>
     <inblock>0</inblock>
     <oublock>8</oublock>
-    <clocktime>0.000310</clocktime>
+    <clocktime>0.000337</clocktime>
   </rusage>
 </dfxml>
