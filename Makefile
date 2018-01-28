@@ -1,7 +1,4 @@
 CWD = $(realpath $(dir $(firstword $(MAKEFILE_LIST))))
-
-SRC=$(wildcard *.txt)
-
 SRC=$(wildcard *.txt)
 
 SIGNED=$(SRC:.txt=.txt.asc)
@@ -21,7 +18,19 @@ CHECKSUM_XML_ZIP=$(CHECKSUM_XML:.txt.xml=.txt.xml.zip)
 OBJS=${CHECKSUM} ${CHECKSUM_XML} \
 	${CHECKSUM_XML} ${CHECKSUM_XML_XZ} \
 	${CHECKSUM_GZ} ${CHECKSUM_XML_GZ} \
-	${CHECKSUM_ZIP} ${CHECKSUM_XML_ZIP}
+	${CHECKSUM_ZIP} ${CHECKSUM_XML_ZIP} \
+	${SIGNED}
+
+.DEFAULT: all
+.PHONY: all
+all:  checksums checksums.xml
+
+checksums: ${OBJS}
+        hashdeep -l -c md5,sha1,sha256,tiger,whirlpool ${^} > ${@}
+
+checksums.xml: ${OBJS}
+        hashdeep -d -l -c md5,sha1,sha256,tiger,whirlpool ${^} > ${@}
+
 
 %.txt.checksum: %.txt
 	hashdeep -l -c md5,sha1,sha256,tiger,whirlpool ${<} > ${@}
@@ -47,13 +56,9 @@ OBJS=${CHECKSUM} ${CHECKSUM_XML} \
 %.txt.xml.zip: %.txt.xml
 	zip -9 ${@} ${<}
 
-checksums: ${OBJS}
-	hashdeep -l -c md5,sha1,sha256,tiger,whirlpool ${^} > ${@}
+%.txt.asc: %.txt
+        gpg --homedir=${CWD}/.gpg --clearsign ${<}
 
-checksums.xml: ${OBJS}
-	hashdeep -d -l -c md5,sha1,sha256,tiger,whirlpool ${^} > ${@}
-
-.DEFAULT: all
 .PHONY: debug
 debug:
 	$(info $${SRC}=${SRC})
@@ -62,12 +67,13 @@ debug:
 	$(info $${CHECKSUM_GZ}=${CHECKSUM_GZ})
 	$(info $${CHECKSUM_ZIP}=${CHECKSUM_ZIP})
 
-.PHONY: all
-all: checksums checksums.xml
-
 .PHONY: clean
 clean:
-	-rm -f checksums checksums.xml ${OBJS}
+	git clean -xfd
+
+.PHONY: signed
+signed: ${SIGNED}
+
 
 .PHONY: gpg
 gpg: ${CWD}/.gpg/random_seed
@@ -77,9 +83,3 @@ ${CWD}/.gpg/random_seed: ${CWD}/.gpg
 
 ${CWD}/.gpg:
 	mkdir -p ${@}
-
-%.txt.asc: %.txt
-	gpg --homedir=${CWD}/.gpg --clearsign ChallengerLaunch.txt
-
-.PHONY: signed
-signed: ${SIGNED}
