@@ -26,10 +26,10 @@ OBJS=${CHECKSUM} ${CHECKSUM_XML} \
 all:  checksums checksums.xml
 
 checksums: ${OBJS}
-        hashdeep -l -c md5,sha1,sha256,tiger,whirlpool ${^} > ${@}
+	hashdeep -l -c md5,sha1,sha256,tiger,whirlpool ${^} > ${@}
 
 checksums.xml: ${OBJS}
-        hashdeep -d -l -c md5,sha1,sha256,tiger,whirlpool ${^} > ${@}
+	hashdeep -d -l -c md5,sha1,sha256,tiger,whirlpool ${^} > ${@}
 
 
 %.txt.checksum: %.txt
@@ -57,7 +57,7 @@ checksums.xml: ${OBJS}
 	zip -9 ${@} ${<}
 
 %.txt.asc: %.txt
-        gpg --homedir=${CWD}/.gpg --clearsign ${<}
+	gpg --homedir=${CWD}/.gpg --clearsign ${<}
 
 .PHONY: debug
 debug:
