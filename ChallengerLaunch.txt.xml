@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dfxml 
+  xmlns='http://www.forensicswiki.org/wiki/Category:Digital_Forensics_XML' 
+  xmlns:deep='http://md5deep.sourceforge.net/md5deep/' 
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' 
+  xmlns:dc='http://purl.org/dc/elements/1.1/' version='1.0'>
+  <deep:configuration>
+    <algorithms>
+      <algorithm name='md5' enabled='1'/>
+      <algorithm name='sha1' enabled='1'/>
+      <algorithm name='sha256' enabled='1'/>
+      <algorithm name='tiger' enabled='1'/>
+      <algorithm name='whirlpool' enabled='1'/>
+      <algorithm name='' enabled='0'/>
+    </algorithms>
+  </deep:configuration>
+  <metadata>
+    <dc:type>Hash List</dc:type>
+  </metadata>
+  <creator version='1.0'>
+    <program>MD5DEEP</program>
+    <version>4.4</version>
+    <build_environment>
+      <compiler>GCC 5.2</compiler>
+    </build_environment>
+    <execution_environment>
+      <os_sysname>Linux</os_sysname>
+      <os_release>4.8.0-32-generic</os_release>
+      <os_version>#34~16.04.1-Ubuntu SMP Tue Dec 13 17:03:41 UTC 2016</os_version>
+      <host>m6700</host>
+      <arch>x86_64</arch>
+      <command_line>hashdeep -d -l -c md5,sha1,sha256,tiger,whirlpool ChallengerLaunch.txt</command_line>
+      <uid>1001</uid>
+      <start_time>2018-01-28T07:10:17Z</start_time>
+    </execution_environment>
+  </creator>
+  <fileobject>
+    <filename>ChallengerLaunch.txt</filename>
+    <filesize>274</filesize>
+    <mtime>2018-01-05T09:39:32Z</mtime>
+    <ctime>2018-01-05T09:39:32Z</ctime>
+    <atime>2018-01-28T00:26:32Z</atime>
+    <hashdigest type='MD5'>403c7b10b606ffa7b73c44f9343e2f27</hashdigest>
+    <hashdigest type='SHA1'>e4bbc4d729e6d31914b5af735b6afcfa360c0a2c</hashdigest>
+    <hashdigest type='SHA256'>1951c20392f03f2aca270b4c01bced1b31bba2d20c7b0e3b3d0083daabcbb513</hashdigest>
+    <hashdigest type='TIGER'>f4a1e3a5cd2e00eaa80381a2b5ce87d1a382cc7cfb81f46f</hashdigest>
+    <hashdigest type='WHIRLPOOL'>a4f147f2c8ca2a6f41a0c9cd15e80722915c1f814848fb7c85c63955c4cbaefedfba6237b7abe654e21dc4b90f929ad8b481fe294f8c5558dbd9b02b21ff363b</hashdigest>
+  </fileobject>
+  <rusage>
+    <utime>0.000000</utime>
+    <stime>0.000000</stime>
+    <maxrss>1972</maxrss>
+    <minflt>169</minflt>
+    <majflt>0</majflt>
+    <nswap>0</nswap>
+    <inblock>0</inblock>
+    <oublock>8</oublock>
+    <clocktime>0.000287</clocktime>
+  </rusage>
+</dfxml>
